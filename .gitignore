@@ -1,0 +1,5 @@
+_archive
+_templates
+__pycache__
+*.asv
+*.autosave

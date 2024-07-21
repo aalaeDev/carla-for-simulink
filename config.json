@@ -1,0 +1,9 @@
+{
+    "CarlaPath" : "C:/carla/Build/UE4Carla/0.9.15-169-g063cc9d90-dirty/WindowsNoEditor",
+    "CarlaLauncher" : "CarlaUE4.exe", 
+    "CarlaExecutable": "CarlaUE4-Win64-Shipping.exe",
+    "MapsPath" : "CarlaUE4/Content/Carla/Maps",
+    "MainModel" : "./src/carla4sm_genric_mdl.slx",
+    "LaunchBlockName": "Launch Carla",
+    "VehiclesDbPath": "./assets/vehicles.json"
+}

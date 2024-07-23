@@ -47,11 +47,11 @@ function Outputs(block, world)
     x     = block.InputPort(2).Data; % PosX
     y     = block.InputPort(3).Data; % PosY
     z     = block.InputPort(4).Data; % PosZ
-    yaw   = block.InputPort(5).Data; % Yaw
-    pitch = block.InputPort(6).Data; % Pitch
+    pitch = block.InputPort(5).Data; % Pitch
+    yaw   = block.InputPort(6).Data; % Yaw
     roll  = block.InputPort(7).Data; % Roll
     
-    actor.set_location(py.carla.Transform(py.carla.Location(x, y, z),...
-                         py.carla.Location(yaw, pitch, roll)));
+    actor.set_transform(py.carla.Transform(py.carla.Location(x, y, z),...
+                                           py.carla.Rotation(pitch, yaw, roll)));
 end
 

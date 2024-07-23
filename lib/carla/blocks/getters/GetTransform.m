@@ -59,8 +59,8 @@ function Outputs(block, world)
     block.OutputPort(1).Data = position.x;     % PosX
     block.OutputPort(2).Data = position.y;     % PosY
     block.OutputPort(3).Data = position.z;     % PosZ
-    block.OutputPort(4).Data = rotation.yaw;   % YawAng
-    block.OutputPort(5).Data = rotation.pitch; % PitchAng
+    block.OutputPort(4).Data = rotation.pitch; % PitchAng
+    block.OutputPort(5).Data = rotation.yaw;   % YawAng
     block.OutputPort(6).Data = rotation.roll;  % RollAng
 end
 

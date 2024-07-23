@@ -24,7 +24,7 @@ function setup(block)
     block.SampleTimes = [0 0];
     
     % Initialization of the world and vehicle setup
-    vehicle = initializeVehicle(block);
+    vehicle = initializeVehicle();
 
     % Register the methods
     block.RegBlockMethod('SetInputPortSamplingMode', @SetInputPortSamplingMode);
@@ -36,7 +36,7 @@ function setup(block)
 
 end
 
-function vehicle = initializeVehicle(block)
+function vehicle = initializeVehicle()
     % Get the world object from the base workspace
     world = getWorldFromWS();
     
@@ -52,7 +52,6 @@ function vehicle = initializeVehicle(block)
     % Spawn the vehicle at a random spawn point
     startPoint = py.random.choice(spawnPoints);
     vehicle = world.try_spawn_actor(vehicleBp, startPoint);
-    block.OutputPort(1).Data = uint16(double(vehicle.id)); 
     
     % Set the spectator view to the vehicle's start point
     spectator = world.get_spectator();

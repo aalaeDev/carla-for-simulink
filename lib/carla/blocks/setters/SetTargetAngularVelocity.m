@@ -44,8 +44,8 @@ function Outputs(block, world)
     % Get actor object
     actor =  world.get_actor(uint16(block.InputPort(1).Data));
 
-    x = block.InputPort(2).Data; % YawRate
-    y = block.InputPort(3).Data; % PitchRate
+    y = block.InputPort(2).Data; % PitchRate
+    x = block.InputPort(3).Data; % YawRate
     z = block.InputPort(4).Data; % RollRate
     
     actor.set_location(py.carla.Vector3D(x, y, z));

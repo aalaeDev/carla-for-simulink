@@ -71,8 +71,8 @@ function Outputs(block, moduleIMU)
     block.OutputPort(2).Data = sensor_data.accelerometer.x;     % AccX
     block.OutputPort(3).Data = sensor_data.accelerometer.y;     % AccY
     block.OutputPort(4).Data = sensor_data.accelerometer.z;     % AccZ
-    block.OutputPort(5).Data = sensor_data.gyroscope.x;         % YawAng
-    block.OutputPort(6).Data = sensor_data.gyroscope.y;         % PitchAng
+    block.OutputPort(5).Data = sensor_data.gyroscope.x;         % PitchAng
+    block.OutputPort(6).Data = sensor_data.gyroscope.y;         % YawAng
     block.OutputPort(7).Data = sensor_data.gyroscope.z;         % RollAng
     block.OutputPort(8).Data = sensor_data.compass;             % Compass
 end

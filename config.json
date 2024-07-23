@@ -3,7 +3,7 @@
     "CarlaLauncher" : "CarlaUE4.exe", 
     "CarlaExecutable": "CarlaUE4-Win64-Shipping.exe",
     "MapsPath" : "CarlaUE4/Content/Carla/Maps",
-    "MainModel" : "./src/carla4sm_genric_mdl.slx",
+    "MainModel" : "./examples/SpectatorFollowingVhcl.slx",
     "LaunchBlockName": "Launch Carla",
     "VehiclesDbPath": "./assets/vehicles.json"
 }

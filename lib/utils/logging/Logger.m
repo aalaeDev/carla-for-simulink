@@ -9,7 +9,7 @@ classdef Logger
         end
         
         function success(msg)
-            Logger.log('SUCCESS', msg, '*[0.55, 0.8, 0.36]');
+            Logger.log('SUCCESS', msg, '*[0.1, 0.8, 0.4]');
         end
         
         function warning(msg)

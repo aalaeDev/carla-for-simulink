@@ -52,8 +52,8 @@ function Outputs(block, world)
 
     % Get Transform
     angularVelocity = actor.get_angular_velocity();
-    block.OutputPort(1).Data = angularVelocity.x;     % YawRate
-    block.OutputPort(2).Data = angularVelocity.y;     % PitchRate
+    block.OutputPort(1).Data = angularVelocity.x;     % PitchRate
+    block.OutputPort(2).Data = angularVelocity.y;     % YawRate
     block.OutputPort(3).Data = angularVelocity.z;     % RollRate
 end
 

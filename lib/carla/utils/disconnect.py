@@ -1,5 +1,3 @@
-import carla
-
 def destroy(world):
     actors = world.get_actors()
 

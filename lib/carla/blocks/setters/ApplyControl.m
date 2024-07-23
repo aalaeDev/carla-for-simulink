@@ -42,7 +42,7 @@ end
 
 function Outputs(block, world)
     % Get vehicle object
-    vehicle =  world.get_actor(uint16(24));
+    vehicle =  world.get_actor(uint16(block.InputPort(1).Data));
     control = py.carla.VehicleControl();
 
     throttle    = block.InputPort(2).Data; % Throttle

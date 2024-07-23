@@ -39,6 +39,5 @@ set_param(launchCarlaBlkHandle, 'Port', port);
 
 % Get enviroment list
 loadMapsList(launchCarlaBlkHandle);
-loadVehiclesList(launchCarlaBlkHandle);
 
 clear port maskObj param;

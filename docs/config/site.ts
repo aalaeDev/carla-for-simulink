@@ -3,12 +3,12 @@ import { SiteConfig } from "@/types";
 export const siteConfig: SiteConfig = {
     name: "CARLA for SIMULINK",
     description:
-        "Seamlessly Integrate CARLA with MATLAB/Simulink for Co-Simulation.",
-    version: "0.1.0-beta.1",
-    url: "x",
-    ogImage: "x",
+        "A small proof-of-concept Simulink library for co-simulation with the CARLA simulator.",
+    version: "0.1.0-demo",
+    url: "https://aalaedev.github.io/carla-for-simulink",
+    ogImage: "",
     links: {
-        twitter: "x",
-        github: "x",
+        twitter: "https://github.com/aalaeDev",
+        github: "https://github.com/aalaeDev/carla-for-simulink",
     },
 };

@@ -7,10 +7,10 @@ export default function Footer() {
             <p className="text-balance text-center text-sm leading-loose text-muted-foreground pb-2">
                 Built by{" "}
                 <Link
-                    href={siteConfig.links.twitter}
+                    href="https://github.com/aalaeDev"
                     className="font-medium underline underline-offset-4"
                 >
-                    xaeon7
+                    aalaeDev
                 </Link>
                 . The source code is available on{" "}
                 <Link

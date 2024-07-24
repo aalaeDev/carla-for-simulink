@@ -4,3 +4,7 @@ __pycache__
 *.asv
 *.autosave
 slprj
+# docs build output
+docs/node_modules/
+docs/.next/
+docs/out/

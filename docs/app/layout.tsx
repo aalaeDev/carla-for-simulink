@@ -18,7 +18,8 @@ export default function Layout({ children }: { children: ReactNode }) {
                     fontSans.variable
                 )}
             >
-                <RootProvider>{children}</RootProvider>
+                {/* Search needs a server route, which a static export doesn't have. */}
+                <RootProvider search={{ enabled: false }}>{children}</RootProvider>
             </body>
         </html>
     );

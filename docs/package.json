@@ -4,8 +4,7 @@
     "private": true,
     "scripts": {
         "build": "next build",
-        "dev": "next dev -p 80",
-        "start": "next start"
+        "dev": "next dev"
     },
     "dependencies": {
         "@radix-ui/react-accordion": "^1.2.0",

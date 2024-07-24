@@ -3,6 +3,15 @@ title: Quick Start
 description: Getting Started with Carla for Simulink.
 ---
 
+<Callout title="Proof of concept" type="info">
+    This is a small demo built quickly to show that Simulink and CARLA can co-simulate.
+    It works for the blocks documented here, but it isn't a maintained or complete library.
+
+    It is also limited to one combination of versions: MATLAB R2020a, Python 3.7.9 and CARLA 0.9.15.
+    MATLAB only supports certain Python versions, and each CARLA release needs its own Python client,
+    so other combinations may not work. A fuller implementation is meant to remove these limits.
+</Callout>
+
 This project aims to connect Carla and Simulink, showing how they can work together with some examples. This combination could make it easier to develop self-driving cars.
 (_The following project is inspired by [MATLAB-Carla-Interface](https://github.com/darkscyla/MATLAB-Carla-Interface) by [@darkscyla](https://github.com/darkscyla)_).
 
@@ -26,13 +35,12 @@ The following library was developed using:
 -   Python `3.7.9`
 
 <Callout title="Warning" type="warn">
-    Make sure the installed versions are compatible.
+    Make sure the installed versions are compatible. Other versions are untested.
 
     - MATLAB: [Versions of Python Compatible with MATLAB Products by
     Release](https://www.mathworks.com/support/requirements/python-compatibility.html)
     - Carla: [Carla Documentation](https://carla.readthedocs.io/en/latest/)
 
-    A compatibility check will be done later (still in progress) to provide more details.
 </Callout>
 
 ## Getting Started
@@ -41,15 +49,15 @@ The following library was developed using:
 
 <Steps>
     <Step>
-        <h3>Download Toolbox</h3>
-        Make sure that software requirements are satisfied, and install [Carla4SL Toolbox latest release]().
+        <h3>Get the library</h3>
+        Clone or download [the repository](https://github.com/aalaeDev/carla-for-simulink). There is no packaged toolbox yet.
     </Step>
     <Step>
-        <h3>Instal Toolbox</h3>
-        Add the library to the working diractory.
+        <h3>Point it at CARLA</h3>
+        In `config.json`, set `CarlaPath` to your CARLA install folder. The defaults are for a Windows build of CARLA 0.9.15.
     </Step>
     <Step>
-        <h3>That's it!</h3>
-        Explore the provided [Examples]().
+        <h3>Run `launch.m`</h3>
+        It adds the library to the MATLAB path, opens the example model (`examples/SpectatorFollowingVhcl.slx`), finds a free port and fills in the map and vehicle lists.
     </Step>
 </Steps>

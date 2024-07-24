@@ -1,0 +1,73 @@
+---
+title: Get Transform
+description: Returns the actor's transform (location and rotation) the client recieved during last tick.
+---
+
+<PageLink
+    url="https://carla.readthedocs.io/en/latest/python_api/#getters"
+    text="API Reference"
+/>
+
+<Callout title="Warning" type="warn">
+    The following block is currently under active development and may not be
+    fully functional. It is included for preview and testing purposes only.
+    Users may encounter incomplete features, bugs, or instability. We appreciate
+    your feedback to help improve this component.
+</Callout>
+
+<GridContainer>
+    <LibraryBlocks.GetTransform />
+</GridContainer>
+
+## Ports
+
+---
+
+### Inputs
+
+<TypeTable
+    rows={[
+        {
+            port: "ActorID",
+            type: "uint16",
+            dimension: "1x1",
+        },
+    ]}
+/>
+
+### Outputs
+
+<TypeTable
+    rows={[
+        {
+            port: "PosX",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "PosY",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "PosZ",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "PitchAng",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "YawAng",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "RollAng",
+            type: "double",
+            dimension: "1x1",
+        },
+    ]}
+/>

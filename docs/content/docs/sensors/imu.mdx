@@ -1,0 +1,78 @@
+---
+title: IMU
+description: Comprises an accelerometer, a gyroscope, and a compass.
+---
+
+<PageLink
+    url="https://carla.readthedocs.io/en/latest/ref_sensors/#imu-sensor"
+    text="API Reference"
+/>
+
+<Callout title="Warning" type="warn">
+    The following block is currently under active development and may not be
+    fully functional. It is included for preview and testing purposes only.
+    Users may encounter incomplete features, bugs, or instability. We appreciate
+    your feedback to help improve this component.
+</Callout>
+
+<GridContainer>
+    <LibraryBlocks.IMU />
+</GridContainer>
+
+## Ports
+
+---
+
+### Inputs
+
+<TypeTable
+    rows={[
+        {
+            port: "ActorID",
+            type: "uint16",
+            dimension: "1x1",
+        },
+    ]}
+/>
+
+### Outputs
+
+<TypeTable
+    rows={[
+        {
+            port: "AccX",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "AccY",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "AccZ",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "YawRate",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "PitchRate",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "RollRate",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "Compass",
+            type: "double",
+            dimension: "1x1",
+        },
+    ]}
+/>

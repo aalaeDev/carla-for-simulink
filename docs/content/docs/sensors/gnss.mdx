@@ -1,0 +1,58 @@
+---
+title: GNSS
+description: Retrieves the geolocation of the sensor.
+---
+
+<PageLink
+    url="https://carla.readthedocs.io/en/latest/ref_sensors/#gnss-sensor"
+    text="API Reference"
+/>
+
+<Callout title="Warning" type="warn">
+    The following block is currently under active development and may not be
+    fully functional. It is included for preview and testing purposes only.
+    Users may encounter incomplete features, bugs, or instability. We appreciate
+    your feedback to help improve this component.
+</Callout>
+
+<GridContainer>
+    <LibraryBlocks.GNSS />
+</GridContainer>
+
+## Ports
+
+---
+
+### Inputs
+
+<TypeTable
+    rows={[
+        {
+            port: "ActorID",
+            type: "uint16",
+            dimension: "1x1",
+        },
+    ]}
+/>
+
+### Outputs
+
+<TypeTable
+    rows={[
+        {
+            port: "Altitude",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "Latitude",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "Longitude",
+            type: "double",
+            dimension: "1x1",
+        },
+    ]}
+/>

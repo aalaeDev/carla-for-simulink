@@ -1,0 +1,181 @@
+---
+title: Launch Carla
+description: The Launch Carla Block starts the Carla Simulator (Server) from Simulink, allowing configuration of connection settings, simulation mode, graphics quality, and environment parameters like map, weather, and NPC count. This block enables co-simulation between Carla and Simulink.
+---
+
+<PageLink
+    url="https://carla.readthedocs.io/en/latest/tuto_first_steps"
+    text="API Reference"
+/>
+
+<Callout title="Warning" type="warn">
+    The following block is currently under active development and may not be
+    fully functional. It is included for preview and testing purposes only.
+    Users may encounter incomplete features, bugs, or instability. We appreciate
+    your feedback to help improve this component.
+</Callout>
+
+<GridContainer>
+    <LibraryBlocks.LaunchCarla />
+</GridContainer>
+
+## Parameters
+
+---
+
+Before launching Carla Simulator (Server) we first have to configure the **Launch Carla** Block.
+
+### Connection
+
+<GridContainer>
+    <Image
+        alt="connection-window"
+        src="/carla-env/launch-carla/connection.png"
+        width={400}
+        height={400}
+        className="dark:invert border border-muted-foreground rounded-sm"
+    />
+</GridContainer>
+
+<ParameterAccordion
+    title="Port"
+    subtitle="TCP Port"
+    types="2000 (default) | uint16"
+    description={
+        <div>
+            Specify the TCP port where the Carla Server will be launched and
+            Carla Client will listen to as a{" "}
+            <span className="font-bold">uint16</span>. Press "
+            <span className="font-bold">Find Available Port</span>" to find the
+            closest available Port.
+        </div>
+    }
+/>
+<ParameterAccordion
+    title="Timeout"
+    subtitle="The maximum wait time for a network call in seconds"
+    types="20 (default) | double"
+    description="Specify the maximum time a network call is allowed before blocking it and raising a timeout exceeded error."
+/>
+
+### Settings
+
+<GridContainer>
+    <Image
+        alt="settings-window"
+        src="/carla-env/launch-carla/settings.png"
+        width={400}
+        height={400}
+        className="dark:invert border border-muted-foreground rounded-sm"
+    />
+</GridContainer>
+
+<ParameterAccordion
+    title="Carla Path"
+    subtitle="Carla Simulator executable file"
+    types="string"
+    description="Specify the full path to the Carla Simulator executable file. This is necessary to launch the Carla Simulator correctly."
+/>
+
+<ParameterAccordion
+    title="Simulation Mode"
+    subtitle="Choose the simulation mode"
+    types="Synchronous (default) | Asynchronous"
+    description={
+        <div>
+            Select the mode of simulation. In{" "}
+            <Link
+                target="_blank"
+                href="https://carla.readthedocs.io/en/latest/adv_traffic_manager/#synchronous-mode"
+                className="font-bold"
+            >
+                Synchronous
+            </Link>{" "}
+            mode, the simulation is stepped according to the client commands,
+            ensuring precise control over the simulation time steps. In{" "}
+            <span className="font-bold">Asynchronous</span> mode, the simulation
+            runs freely without waiting for the client commands, which is useful
+            for real-time simulations but less precise in control.
+
+            <Callout title="Warning" type="warn">
+                Add{" "}
+                <Link href="world-tick" className="font-bold">World Tick</Link> {" "}
+                block when using sync mode.
+            </Callout>
+        </div>
+    }
+
+/>
+
+<ParameterAccordion
+    title="Quality"
+    subtitle="Set the graphics quality"
+    types="Epic (default) | Low"
+    description="Select the desired graphics quality for the Carla Simulator. Higher quality settings provide better visuals but require more computational resources."
+/>
+
+#### Window Size
+
+<ParameterAccordion
+    title="Width"
+    subtitle="Set the width of the simulation window"
+    types="600 (default) | uint16"
+    description="Specify the width of the Carla simulation window in pixels."
+/>
+<ParameterAccordion
+    title="Height"
+    subtitle="Set the height of the simulation window"
+    types="340 (default) | uint16"
+    description="Specify the height of the Carla simulation window in pixels."
+/>
+<ParameterAccordion
+    title="Windowed"
+    subtitle="Toggle windowed mode"
+    types="true (default) | false"
+    description="Check this box to run the simulation in windowed mode instead of fullscreen."
+/>
+
+### Environment
+
+<GridContainer>
+    <Image
+        alt="environment-window"
+        src="/carla-env/launch-carla/environment.png"
+        width={400}
+        height={400}
+        className="dark:invert border border-muted-foreground rounded-sm"
+    />
+</GridContainer>
+
+<ParameterAccordion
+    title="Map"
+    subtitle="Select the simulation map"
+    types="Town01 (default) | string"
+    description={
+        <div>
+            Specify the map for the simulation environment. Press "
+            <span className="font-bold">Refresh Maps List</span>" to fetch the
+            available maps from the Carla server and update the list.
+        </div>
+    }
+/>
+
+<ParameterAccordion
+    title="Weather"
+    subtitle="Select the weather conditions"
+    types="ClearNoon (default) | string"
+    description={
+        <div>
+            Specify the weather conditions for the simulation. Press "
+            <span className="font-bold">Refresh Maps List</span>" to fetch the
+            available weather presets from the Carla server and update the list.
+        </div>
+    }
+/>
+
+<ParameterAccordion
+    title="NPCs Count"
+    subtitle="Set the number of Non-Player Characters (NPCs)"
+    types="0 (default) | uint16"
+    description="Specify the number of NPC vehicles to populate the simulation environment."
+/>

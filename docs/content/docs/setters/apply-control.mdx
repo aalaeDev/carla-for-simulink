@@ -1,0 +1,61 @@
+---
+title: Apply Control
+description: Applies a control object on the next tick, containing driving parameters such as throttle, steering or gear shifting.
+---
+
+<PageLink
+    url="https://carla.readthedocs.io/en/latest/python_api/#carla.Vehicle"
+    text="API Reference"
+/>
+
+<Callout title="Warning" type="warn">
+    The following block is currently under active development and may not be
+    fully functional. It is included for preview and testing purposes only.
+    Users may encounter incomplete features, bugs, or instability. We appreciate
+    your feedback to help improve this component.
+</Callout>
+
+<GridContainer>
+    <LibraryBlocks.ApplyControl />
+</GridContainer>
+
+## Ports
+
+---
+
+### Inputs
+
+<TypeTable
+    rows={[
+        {
+            port: "VehicleID",
+            type: "uint16",
+            dimension: "1x1",
+        },
+        {
+            port: "Throttle",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "Brake",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "SteerAng",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "HandBrake",
+            type: "double",
+            dimension: "1x1",
+        },
+        {
+            port: "isRevGear",
+            type: "double",
+            dimension: "1x1",
+        },
+    ]}
+/>

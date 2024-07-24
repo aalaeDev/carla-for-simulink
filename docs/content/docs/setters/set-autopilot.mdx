@@ -1,0 +1,41 @@
+---
+title: Set Autopilot
+description: Registers or deletes the vehicle from a Traffic Manager's list. When True, the Traffic Manager passed as parameter will move the vehicle around.
+---
+
+<PageLink
+    url="https://carla.readthedocs.io/en/latest/python_api/#setters"
+    text="API Reference"
+/>
+
+<Callout title="Warning" type="warn">
+    The following block is currently under active development and may not be
+    fully functional. It is included for preview and testing purposes only.
+    Users may encounter incomplete features, bugs, or instability. We appreciate
+    your feedback to help improve this component.
+</Callout>
+
+<GridContainer>
+    <LibraryBlocks.SetAutopilot />
+</GridContainer>
+
+## Ports
+
+---
+
+### Inputs
+
+<TypeTable
+    rows={[
+        {
+            port: "VehicleID",
+            type: "uint16",
+            dimension: "1x1",
+        },
+        {
+            port: "Status",
+            type: "boolean",
+            dimension: "1x1",
+        },
+    ]}
+/>
